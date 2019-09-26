@@ -1,0 +1,81 @@
+﻿  frmPrincipal.cpp
+e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CVecDisco.h(73): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+frmPrincipal.cpp(8): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJugador.h(176): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJugador.h(175): note: while compiling class template member function 'void CJugador<int>::Set_NroVidas(I)'
+          with
+          [
+              I=int
+          ]
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CVecDisco.h(72): note: see reference to function template instantiation 'void CJugador<int>::Set_NroVidas(I)' being compiled
+          with
+          [
+              I=int
+          ]
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CVecDisco.h(68): note: see reference to class template instantiation 'CJugador<int>' being compiled
+e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJuego.h(62): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJuego.h(59): note: while compiling class template member function 'CJuego<int>::CJuego(I,I)'
+          with
+          [
+              I=int
+          ]
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\frmPrincipal.h(385): note: see reference to function template instantiation 'CJuego<int>::CJuego(I,I)' being compiled
+          with
+          [
+              I=int
+          ]
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\frmPrincipal.h(385): note: see reference to class template instantiation 'CJuego<int>' being compiled
+e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJuego.h(94): warning C4305: '-=': truncation from 'double' to 'float'
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJuego.h(92): note: while compiling class template member function 'void CJuego<int>::Dibujar(System::Drawing::BufferedGraphics ^,System::Drawing::Graphics ^,System::Drawing::Bitmap ^,System::Drawing::Bitmap ^,System::Drawing::Bitmap ^)'
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\frmPrincipal.h(409): note: see reference to function template instantiation 'void CJuego<int>::Dibujar(System::Drawing::BufferedGraphics ^,System::Drawing::Graphics ^,System::Drawing::Bitmap ^,System::Drawing::Bitmap ^,System::Drawing::Bitmap ^)' being compiled
+e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJuego.h(218): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJuego.h(217): note: while compiling class template member function 'void CJuego<int>::saltarNivel(void)'
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\frmPrincipal.h(453): note: see reference to function template instantiation 'void CJuego<int>::saltarNivel(void)' being compiled
+e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJugador.h(48): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJugador.h(47): note: while compiling class template member function 'CJugador<int>::CJugador(I,I,I,I,I,I,I,I,bool)'
+          with
+          [
+              I=int
+          ]
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJuego.h(63): note: see reference to function template instantiation 'CJugador<int>::CJugador(I,I,I,I,I,I,I,I,bool)' being compiled
+          with
+          [
+              I=int
+          ]
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJugador.h(162): note: while compiling class template member function 'bool CJugador<int>::HayColision(I,I,I,I)'
+          with
+          [
+              I=int
+          ]
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CVecDisco.h(68): note: see reference to function template instantiation 'bool CJugador<int>::HayColision(I,I,I,I)' being compiled
+          with
+          [
+              I=int
+          ]
+e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJugador.h(71): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJugador.h(68): note: while compiling class template member function 'void CJugador<int>::Dibujar(System::Drawing::BufferedGraphics ^,System::Drawing::Bitmap ^,I,I)'
+          with
+          [
+              I=int
+          ]
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJugador.h(151): note: see reference to function template instantiation 'void CJugador<int>::Dibujar(System::Drawing::BufferedGraphics ^,System::Drawing::Bitmap ^,I,I)' being compiled
+          with
+          [
+              I=int
+          ]
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJugador.h(47): note: while compiling class template member function 'CJugador<int>::CJugador(I,I,I,I,I,I,I,I,bool)'
+          with
+          [
+              I=int
+          ]
+  e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\CJuego.h(63): note: see reference to function template instantiation 'CJugador<int>::CJugador(I,I,I,I,I,I,I,I,bool)' being compiled
+          with
+          [
+              I=int
+          ]
+e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\cjuego.h(124): warning C4715: 'CJuego<int>::obtener': not all control paths return a value
+e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\cjuego.h(202): warning C4700: uninitialized local variable 'i' used
+e:\parcialalgoritmo\upctrabajoparcialalgoritmo\upc-discroom\cjuego.h(213): warning C4700: uninitialized local variable 'i' used
+  frmPrincipal.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  UPC-DiscRoom.vcxproj -> E:\ParcialAlgoritmo\UPCtrabajoparcialAlgoritmo\Debug\UPCDiscRoom.exe
+  UPC-DiscRoom.vcxproj -> E:\ParcialAlgoritmo\UPCtrabajoparcialAlgoritmo\Debug\UPCDiscRoom.pdb (Partial PDB)
