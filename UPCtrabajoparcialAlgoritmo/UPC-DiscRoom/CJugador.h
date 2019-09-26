@@ -4,34 +4,34 @@ using namespace System;
 using namespace System::Drawing; 
 enum Direcciones { Ninguna, Abajo, Arriba, Izquierda, Derecha };
 #define N_FRAMES01 1
-template <class I>
+template <class T>
 class CJugador
 {
 private:
-	I X, Y;
-	I dX, dY;
-	I Ancho, Largo;
-	I Indice;
-	I NroVidas;
+	T X, Y;
+	T dX, dY;
+	T Ancho, Largo;
+	T Indice;
+	T NroVidas;
 	bool Eliminado;
 	Direcciones ultimaTecla;
-	I indiceX, indiceY;
+	T indiceX, indiceY;
 
 	
 public:
 	CJugador();
-	CJugador(I X, I Y, I Ancho, I Largo, I dX, I dY, I Indice,I NroVidas,bool Eliminado);
+	CJugador(T X, T Y, T Ancho, T Largo, T dX, T dY, T Indice,T NroVidas,bool Eliminado);
 	~CJugador();
-	void Dibujar(BufferedGraphics^buffer,Bitmap^img1, I anchoF, I largoF);
-	void mover(I AnchoF, I LargoF, BufferedGraphics^Buffer, Bitmap^bmp);
-	bool HayColision(I pX, I pY);
-	bool HayColision(I pX, I pY, I pAncho, I pLargo);
+	void Dibujar(BufferedGraphics^buffer,Bitmap^img1, T anchoF, T largoF);
+	void mover(T AnchoF, T LargoF, BufferedGraphics^Buffer, Bitmap^bmp);
+	bool HayColision(T pX, T pY);
+	bool HayColision(T pX, T pY, T pAncho, T pLargo);
 	int Get_NroVidas();
-	void Set_NroVidas(I NroVidas);
+	void Set_NroVidas(T NroVidas);
 	int Get_X();
 	int Get_Y();
-	void Set_X(I X);
-	void Set_Y(I Y);
+	void Set_X(T X);
+	void Set_Y(T Y);
 	int Get_Ancho();
 	int Get_Largo();
 	bool get_Eliminado();
@@ -40,10 +40,10 @@ public:
 	void set_direccion(Direcciones direccion);
 
 };
-template <class I>
-CJugador<I>::CJugador() {}
-template <class I>
-CJugador<I>::CJugador(I X, I Y,I Ancho, I Largo,I Indice, I NroVidas, I dX, I dY,bool Elimando)
+template <class T>
+CJugador<T>::CJugador() {}
+template <class T>
+CJugador<T>::CJugador(T X, T Y,T Ancho, T Largo,T Indice, T NroVidas, T dX, T dY,bool Elimando)
 {
 	Random^ r = gcnew Random(DateTime::Now.Ticks);
 	
@@ -61,10 +61,10 @@ CJugador<I>::CJugador(I X, I Y,I Ancho, I Largo,I Indice, I NroVidas, I dX, I dY
 	this->indiceX = 0;
 	this->indiceY = 0;
 }
-template <class I>
-CJugador<I>::~CJugador() {}
-template <class I>
-void CJugador<I>::Dibujar(BufferedGraphics^Buffer, Bitmap^bmp, I AnchoF, I LargoF)
+template <class T>
+CJugador<T>::~CJugador() {}
+template <class T>
+void CJugador<T>::Dibujar(BufferedGraphics^Buffer, Bitmap^bmp, T AnchoF, T LargoF)
 {
 	
 	Rectangle porcionAUsar = Rectangle(indiceX*Ancho, indiceY*Largo, Ancho, Largo);
@@ -79,8 +79,8 @@ void CJugador<I>::Dibujar(BufferedGraphics^Buffer, Bitmap^bmp, I AnchoF, I Largo
 	else if (direccion == Arriba && Y - dY - (LargoF / 10) > 0) // HACIA ARRIBA
 		Y += dY;
 }
-template <class I>
-void CJugador<I>::mover(I AnchoF, I LargoF,BufferedGraphics^Buffer, Bitmap^bmp)
+template <class T>
+void CJugador<T>::mover(T AnchoF, T LargoF,BufferedGraphics^Buffer, Bitmap^bmp)
 {
 	switch (direccion)
 	{
@@ -151,64 +151,64 @@ void CJugador<I>::mover(I AnchoF, I LargoF,BufferedGraphics^Buffer, Bitmap^bmp)
 	Dibujar(Buffer, bmp,AnchoF,LargoF);
 }
 
-template <class I>
-bool CJugador<I>::HayColision(I pX, I pY)
+template <class T>
+bool CJugador<T>::HayColision(T pX, T pY)
 {
 	return pX >= X && pX <= X + Ancho &&
 		pY >= Y && pY <= Y + Largo;
 }
-template <class I>
-bool CJugador<I>::HayColision(I pX, I pY, I pAncho, I pLargo)
+template <class T>
+bool CJugador<T>::HayColision(T pX, T pY, T pAncho, T pLargo)
 {
 	return HayColision(pX, pY) ||
 		HayColision(pX + pAncho, pY) ||
 		HayColision(pX, pY + pLargo) ||
 		HayColision(pX + pAncho, pY + pLargo);
 }
-template <class I>
-int CJugador<I>::Get_NroVidas()
+template <class T>
+int CJugador<T>::Get_NroVidas()
 {
 	return this->NroVidas;
 }
-template <class I>
-void CJugador<I>::Set_NroVidas(I NroVidas)
+template <class T>
+void CJugador<T>::Set_NroVidas(T NroVidas)
 {
 	Random^ r = gcnew Random(DateTime::Now.Ticks);
 	this->NroVidas = NroVidas;
 }
-template <class I>
-int CJugador<I>::Get_X()
+template <class T>
+int CJugador<T>::Get_X()
 {
 	return this->X;
 }
-template <class I>
-int CJugador<I>::Get_Y()
+template <class T>
+int CJugador<T>::Get_Y()
 {
 	return this->Y;
 }
-template <class I>
-int CJugador<I>::Get_Ancho()
+template <class T>
+int CJugador<T>::Get_Ancho()
 {
 	return this->Ancho;
 }
-template <class I>
-int CJugador<I>::Get_Largo()
+template <class T>
+int CJugador<T>::Get_Largo()
 {
 	return this->Largo;
 }
-template <class I>
-bool CJugador<I>::get_Eliminado() {
+template <class T>
+bool CJugador<T>::get_Eliminado() {
 	return this->Eliminado;
 }
-template <class I>
-void CJugador<I>::set_Eliminado(bool Eliminado) {
+template <class T>
+void CJugador<T>::set_Eliminado(bool Eliminado) {
 	this->Eliminado = Eliminado;
 }
-template <class I>
-void CJugador<I>::Set_X(I X){this->X=X;}
-template <class I>
-void CJugador<I>::Set_Y(I Y){this->Y=Y;}
-template <class I>
-void CJugador<I>::set_direccion(Direcciones direccion) {
+template <class T>
+void CJugador<T>::Set_X(T X){this->X=X;}
+template <class T>
+void CJugador<T>::Set_Y(T Y){this->Y=Y;}
+template <class T>
+void CJugador<T>::set_direccion(Direcciones direccion) {
 	this->direccion = direccion;
 }
